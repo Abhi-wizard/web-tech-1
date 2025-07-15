@@ -1,0 +1,120 @@
+/* General Page Styling */
+body {
+    background-color: #8b4c00;
+    font-family: 'Georgia', serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  header h1 {
+    color: darkgreen;
+    font-size: 3em;
+    margin-top: 20px;
+  }
+  
+  header h2 {
+    color: darkgreen;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding: 5px;
+  }
+  
+  nav a.active {
+    border-bottom: 2px solid white;
+  }
+  
+  /* Product Section */
+  .product-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border: 2px solid white;
+    padding: 10px;
+  }
+  
+  .more-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .product-frame {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    border: 2px solid white;
+    padding: 20px;
+    background-color: #a0522d;
+    border-radius: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .product-box {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    background-color: #d2691e;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .product-box img {
+    width: 100%;
+    max-width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .product-box p {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 10px;
+    color: white;
+  }
+  
+  /* Cart Button */
+  .cart-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 25px;
+    font-size: 1.3em;
+    background-color: white;
+    color: #8b4c00;
+    font-weight: bold;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .cart-button:hover {
+    background-color: #f0e68c;
+  }
+  
