@@ -2,119 +2,154 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Portpolio</title>
+  <title>Abhi | Mercury Naturals</title>
+  <link rel="stylesheet" href="styles/style.css" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: 'Georgia', serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
     }
+
+    header {
+      background-color: #5d2a00;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+
+    nav {
+      background-color: #8b4c00;
+      padding: 10px;
+      text-align: center;
+    }
+
     nav a {
-      margin: 10px;
+      margin: 0 20px;
+      color: white;
       text-decoration: none;
-      color: #0077cc;
+      font-weight: bold;
     }
-    hr {
-      border: 1px solid #ccc;
+
+    section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .about-me {
+      background-color: #f1e4d1;
+    }
+
+    .about-me p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .product-preview {
+      background-color: #fff2e6;
+    }
+
+    .product-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .product-item {
+      background-color: #e6c4a5;
+      padding: 15px;
+      border-radius: 10px;
+      width: 200px;
+    }
+
+    .product-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .btn-container {
+      margin-top: 30px;
+    }
+
+    .btn {
+      background-color: #8b4c00;
+      color: white;
+      padding: 12px 24px;
+      margin: 10px;
+      border: none;
+      font-size: 1em;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #d2691e;
+    }
+
+    footer {
+      background-color: #8b4c00;
+      color: white;
+      padding: 15px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-  <h1>Welcome to Wizard's World</h1>
-  <img src="img/A.jfif" alt="My Photo" width="150">
+  <header>
+    <h1>Welcome to Abhi's World</h1>
+    <p>Discover who I am and what I create 🌿</p>
+  </header>
 
   <nav>
-    <a href="#about">About Me</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
-    <a href="#hobbies">Hobbies</a>
-    <a herf="#quries">Any Quries</a>
+    <a href="index.html">Home</a>
+    <a href="portpolio.html">Portfolio</a>
+    <a href="product.html">Shop</a>
+    <a href="cart.html">Cart</a>
+    <a href="portpolio.html">Any Quries</a>
   </nav>
 
-  <hr>
-
-  <section id="about">
+  <section class="about-me">
     <h2>About Me</h2>
-    <p>Hello! I’m <strong>Abhi</strong> &#128075;. I’m a student passionate about <em>web development</em> & learning new technologies! I love solving problems using code & creativity.</p>
+    <p>Hello! I’m <strong>Abhi</strong>, a passionate MCA student and creator of <strong>Mercury Naturals</strong>. I love building websites and making organic handmade soaps & shampoos with my family. 🌱</p>
   </section>
 
-  <hr>
+  <section class="product-preview">
+    <h2>Top Products from Mercury Naturals</h2>
+    <div class="product-grid">
+      <div class="product-item">
+        <img src="images/alovera-soap.png" alt="Alovera Soap">
+        <p><strong>Alovera Soap</strong><br>₹60</p>
+      </div>
+      <div class="product-item">
+        <img src="images/red-sandal-soap.png" alt="Red Sandal Soap">
+        <p><strong>Red Sandal Soap</strong><br>₹80</p>
+      </div>
+      <div class="product-item">
+        <img src="images/neem-soap.png" alt="Neem Soap">
+        <p><strong>Neem Soap</strong><br>₹65</p>
+      </div>
+    </div>
 
-  <section id="education">
-    <h2>Academic Background</h2>
-    <table border="1" cellpadding="10">
-      <tr>
-        <th>Level</th>
-        <th>Institution</th>
-        <th>Year</th>
-        <th>Percentage</th>
-      </tr>
-      <tr>
-        <td>10th</td>
-        <td>Muthamil Govt. Hr. Sec. School</td>
-        <td>2018</td>
-        <td>72%</td>
-      </tr>
-      <tr>
-        <td>12th</td>
-        <td>Muthamil Govt. Hr. Sec. School</td>
-        <td>2021</td>
-        <td>79%</td>
-      </tr>
-      <tr>
-        <td>UG</td>
-        <td>Hindusthan college of Arts Science</td>
-        <td>2023</td>
-        <td>80%</td>
-      </tr>
-      <tr>
-        <td>PG</td>
-        <td>Bharathiar University</td>
-        <td>2026</td>
-        <td>75%</td>
-      </tr>
-    </table>
+    <div class="btn-container">
+      <a href="product.html" class="btn">Visit Full Shop</a>
+      <a href="portpolio.html" class="btn">Portfolio</a>
+    </div>
   </section>
-
-  <hr>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <ul>
-        <li>Phone no: 7010194733</li>
-        <li>Email id: abhimanyutharanidharan@gmail.com</li>
-        <li>Linkedin: Abhimanyu T</li>
-    </ul>
-  </section>
-
-  <hr>
-
-  <section id="hobbies">
-    <h2>My Hobbies</h2>
-    <ul>
-      <li>Editing</li>
-      <li>Badminton</li>
-      <li>Photography</li>
-      <li>Writing</li>
-    </ul>
-  </section>
-
-  <hr>
-  <selection>
-    <h2>Any Quries</h2>
-    <form>
-        Name: <input type="text" name="name"><br><br>
-        Email: <input type="email" name="email"><br><br>
-        Message: <br>
-        <textarea rows="5" cols="40"></textarea><br><br>
-        <input type="submit" value="Send">
-      </form>
-  </selection>
 
   <footer>
-    <p>&copy; 2025 My Personal Website</p>
+    <p>Made with ❤️ by Abhi • Mercury Naturals © 2025</p>
   </footer>
 
 </body>
