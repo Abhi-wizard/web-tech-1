@@ -116,35 +116,54 @@
     <div class="product-item">
       <img src="img/alovera-soap.png" alt="Alovera Soap" />
       <h3>Alovera Soap</h3>
-      <p>₹60</p>
-      <button class="add-btn">Add to Cart</button>
+      <p>₹50</p>
+      <button class="add-btn" onclick="addToCart('Alovera Soap', 50, 'images/alovera-soap.png')">Add to Cart</button>
+
     </div>
     <div class="product-item">
       <img src="img/red-sandal-soap.png" alt="Red Sandal Soap" />
       <h3>Red Sandal Soap</h3>
-      <p>₹80</p>
-      <button class="add-btn">Add to Cart</button>
+      <p>₹60</p>
+      <button class="add-btn" onclick="addToCart('Red Sandal Soap', 60, 'images/red-sandal-soap.png')">Add to Cart</button>
+
     </div>
     <div class="product-item">
       <img src="img/neem-soap.png" alt="Neem Soap" />
       <h3>Neem Soap</h3>
-      <p>₹65</p>
-      <button class="add-btn">Add to Cart</button>
+      <p>₹50</p>
+      <button class="add-btn" onclick="addToCart('Neem Soap', 50, 'images/neem-soap.png')">Add to Cart</button>
+
     </div>
     <div class="product-item">
       <img src="img/herbal-shampoo.png" alt="Herbal Shampoo" />
       <h3>Herbal Shampoo</h3>
-      <p>₹90</p>
-      <button class="add-btn">Add to Cart</button>
+      <p>₹100</p>
+      <button class="add-btn" onclick="addToCart('Herbal Shampoo', 100, 'images/herbal-shampoo.png')">Add to Cart</button>
+
     </div>
     <div class="product-item">
       <img src="img/hair-oil.png" alt="Hair Oil" />
       <h3>Hair Growth Oil</h3>
-      <p>₹120</p>
-      <button class="add-btn">Add to Cart</button>
+      <p>₹150</p>
+      <button class="add-btn" onclick="addToCart('Hair Growth Oil', 100, 'images/hair-oil.png')">Add to Cart</button>
     </div>
     <!-- Add more products as needed -->
   </section>
+
+  <script>
+    function addToCart(name, price, image) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const existing = cart.find(item => item.name === name);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ name, price, image, quantity: 1 });
+      }
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(name + " added to cart!");
+    }
+  </script>
+  
 
 </body>
 </html>
