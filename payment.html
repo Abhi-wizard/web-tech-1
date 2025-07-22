@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout | Mercury Naturals</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #fffaf0;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #8b4c00;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #f8f6f3;
+    }
+    h2 {
+      color: #5d2a00;
+      margin-top: 20px;
+    }
+    .container {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ddd;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: 'Georgia', serif;
+    }
+    .payment-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .pay-btn {
+      background-color: #5d2a00;
+      color: white;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .pay-btn:hover {
+      background-color: #d2691e;
+    }
+    .payment-form {
+      display: none;
+      margin-top: 20px;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fefefe;
+    }
+    .submit-btn {
+      background-color: green;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mercury Naturals</h1>
+  <p>Secure Checkout</p>
+</header>
+
+<div class="container">
+  <h2>Shipping Address</h2>
+  <form id="checkoutForm">
+    <input type="text" placeholder="Full Name" required />
+    <input type="text" placeholder="Mobile Number" required />
+    <textarea placeholder="Full Address" required></textarea>
+    <input type="text" placeholder="City" required />
+    <input type="text" placeholder="Pincode" required />
+  </form>
+
+  <h2>Select Payment Method</h2>
+  <div class="payment-options">
+    <button class="pay-btn" onclick="showForm('gpay')">GPay</button>
+    <button class="pay-btn" onclick="showForm('phonepe')">PhonePe</button>
+    <button class="pay-btn" onclick="showForm('paytm')">Paytm</button>
+    <button class="pay-btn" onclick="showForm('upi')">UPI</button>
+    <button class="pay-btn" onclick="showForm('card')">Card</button>
+  </div>
+
+  <!-- Dynamic Payment Form Area -->
+  <div id="paymentDetails" class="payment-form"></div>
+
+</div>
+
+<footer>
+  <p>• Mercury Naturals © 2025</p>
+</footer>
+
+<script>
+  function showForm(method) {
+    const container = document.getElementById('paymentDetails');
+    let html = '';
+
+    if (method === 'gpay' || method === 'phonepe' || method === 'paytm') {
+      html = `
+        <h3>${method.toUpperCase()} Payment</h3>
+        <p>Linked UPI ID: yourname@bank</p>
+        <button class="submit-btn" onclick="payNow()">Pay Now</button>
+      `;
+    } else if (method === 'upi') {
+      html = `
+        <h3>UPI Payment</h3>
+        <input type="text" placeholder="Enter your UPI ID" required />
+        <button class="submit-btn" onclick="payNow()">Pay via UPI</button>
+      `;
+    } else if (method === 'card') {
+      html = `
+        <h3>Card Payment</h3>
+        <input type="text" placeholder="Card Number" required />
+        <input type="text" placeholder="Card Holder Name" required />
+        <input type="text" placeholder="Expiry (MM/YY)" required />
+        <input type="password" placeholder="CVV" required />
+        <button class="submit-btn" onclick="payNow()">Pay with Card</button>
+      `;
+    }
+
+    container.innerHTML = html;
+    container.style.display = 'block';
+  }
+
+  function payNow() {
+    alert("Payment Processing...");
+    window.location.href = "success.html";
+  }
+</script>
+
+</body>
+</html>
