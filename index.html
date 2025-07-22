@@ -97,6 +97,78 @@
       background-color: #d2691e;
     }
 
+    /* Pricing Section */
+    .pricing-table {
+      background-color: #fdf1e8;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .pricing-table h2 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      color: #5d2a00;
+    }
+
+    .pricing-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .card {
+      background-color: #ffe4cc;
+      border: 2px solid #d2691e;
+      border-radius: 12px;
+      padding: 30px;
+      width: 250px;
+      box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card.highlight {
+      background-color: #ffdbb3;
+      border-color: #8b4c00;
+    }
+
+    .card h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #5d2a00;
+    }
+
+    .card .price {
+      font-size: 1.2em;
+      color: #8b4c00;
+      margin-bottom: 20px;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .card ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #dcbfa1;
+    }
+
+    .card button {
+      background-color: #8b4c00;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .card button:hover {
+      background-color: #d2691e;
+    }
+
     footer {
       background-color: #8b4c00;
       color: white;
@@ -117,12 +189,12 @@
     <a href="portpolio.html">Portfolio</a>
     <a href="product.html">Shop</a>
     <a href="cart.html">Cart</a>
-    <a href="portpolio.html">Any Quries</a>
+    <a href="portpolio.html">Any Queries</a>
   </nav>
 
   <section class="about-me">
     <h2>About Company</h2>
-    <p>Hello! I’m <strong>Abhimanyu tharanidharan</strong>,Ceo of <strong>Mercury Naturals</strong>. I love to making organic handmade soaps & shampoos with my family. 🌱</p>
+    <p>Hello! I’m <strong>Abhimanyu Tharanidharan</strong>, CEO of <strong>Mercury Naturals</strong>. I love making organic handmade soaps & shampoos with my family. 🌱</p>
   </section>
 
   <section class="product-preview">
@@ -145,6 +217,48 @@
     <div class="btn-container">
       <a href="product.html" class="btn">Visit Full Shop</a>
       <a href="portpolio.html" class="btn">Portfolio</a>
+    </div>
+  </section>
+
+  <!-- 🌿 Pricing Section -->
+  <section class="pricing-table">
+    <h2>Our Pricing Plans</h2>
+    <div class="pricing-container">
+      <!-- Basic Plan -->
+      <div class="card">
+        <h3>Basic</h3>
+        <p class="price">₹309/month</p>
+        <ul>
+          <li>2 Soaps</li>
+          <li>1 Shampoo</li>
+          <li>1 Hair Oil</li>
+        </ul>
+        <button>Select</button>
+      </div>
+
+      <!-- Pro Plan -->
+      <div class="card highlight">
+        <h3>Pro</h3>
+        <p class="price">₹609/month</p>
+        <ul>
+          <li>5 Soaps</li>
+          <li>3 Shampoos</li>
+          <li>2 Hair Oil</li>
+        </ul>
+        <button>Select</button>
+      </div>
+
+      <!-- Enterprise Plan -->
+      <div class="card">
+        <h3>Enterprise</h3>
+        <p class="price">₹1009/month</p>
+        <ul>
+          <li>10 Soaps</li>
+          <li>5 Shampoos</li>
+          <li>4 Hair Oil</li>
+        </ul>
+        <button>Select</button>
+      </div>
     </div>
   </section>
 
